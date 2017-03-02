@@ -1,0 +1,45 @@
+<?php 
+
+
+require_once(__DIR__ . '../control/ControleProjectBomB.php');
+require_once(__DIR__ . '../model/horario.php');
+require_once(__DIR__ . '/Dao.php');
+
+class DaoProjectBomb extends Dao {
+
+	private $horario;
+
+	function __construct(){
+		parent::__construct();
+	}
+
+	function listarResult(){
+		try{
+			$this->sql = "SELECT id_horario, horario FROM tb_horario";
+			$this->prepare();
+			$this->executar();
+			$row = $this->buscarDoResultadoAssoc();
+
+			$lista = array();
+			foreach ($row as $key => $value) {
+				
+				$this->horario = new horario();
+				$this->horario->setId_horario($row[$key]['id_horario']);
+				$this->horario->setHorario($row[$key]['horario']);
+
+				$lista[] = $this->horario;
+			}
+
+			if(!empty($lista)){
+				return $lista;
+			}else{
+				return "não há resgistro";
+			}
+
+		} catch (Exception $e) {
+	        $this->adicionarErro("Error!: " . $e->getMessage());
+	        echo '{"erro":"'.$e->getMessage().'"}';
+        }
+	}
+
+}

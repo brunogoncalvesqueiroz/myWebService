@@ -1,0 +1,119 @@
+
+
+;Configuração do 000webhost
+
+;******************************************************************************
+
+; Nome do Arquivo   : config.ini
+
+; Descrição         : Arquivo de configuração do sistema
+
+; Programador       : José Gabriel
+
+; CRC               : 49682	
+
+; Data              : 19/01/2015
+
+; Diretório         : ./
+
+; Alteração  : Nome - Data - numero crc
+
+;              # Descrição das alteração...
+
+;******************************************************************************
+
+
+[oracle]
+
+
+ip = 
+
+porta = 
+
+db = 
+
+user = 
+
+pass = 
+
+
+[mysql]
+
+
+ipMysql = localhost
+
+dbMysql = id586807_test
+
+userMysql = id586807_teste
+
+passMysql = teste
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;Configuração para teste local
+
+;******************************************************************************
+
+; Nome do Arquivo   : config.ini
+
+; Descrição         : Arquivo de configuração do sistema
+
+; Programador       : José Gabriel
+
+; CRC               : 49682	
+
+; Data              : 19/01/2015
+
+; Diretório         : ./
+
+; Alteração  : Nome - Data - numero crc
+
+;              # Descrição das alteração...
+
+;******************************************************************************
+
+
+[oracle]
+
+
+ip = 
+
+porta = 
+
+db = 
+
+user = 
+
+pass = 
+
+
+[mysql]
+
+
+ipMysql = localhost
+
+dbMysql = test
+
+userMysql = teste
+
+passMysql = teste
